@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script>
+
+        $(document).ready(() => {
+            let contact = {
+                name: 'lala',
+                family: 'thewho',
+                married: false,
+                address: {
+                    city: 'tel aviv',
+                    street: 'ben yehuda',
+                    number: 23
+                },
+                phone: '054-543654',
+                changeStreetNumber: function(a) {
+                    this.address.number = a;
+                }
+            };
+            console.log('family: ' + contact['family']);
+            console.log('married: ' + contact.married);
+            console.log('address-city: ' + contact.address.city);
+            contact.changeStreetNumber(100);
+            console.log('number ' + contact.address.number);
+            console.log("Document is ready");
+          //  setTimeout(function() {$('#test').hide()}, 2000);
+            ;
+
+            $('#colorPicker').change(() => {
+                let colorChoice = $('#colorPicker').val();
+                $('.test').css('color', colorChoice);
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+<div class="test">Hello</div>
+<div class="test">glbkjgsadi</div>
+<input type="color" id="colorPicker">
+</body>
+</html>
+
